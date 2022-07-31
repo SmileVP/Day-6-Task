@@ -1,0 +1,106 @@
+
+//Question 01:
+
+class Movie{
+ constructor(title,studio,rating="PG"){ 
+  this.title=title;
+  this.studio=studio;
+  this.rating=rating;
+ }
+
+ 
+  getPG(movies){
+    
+    return (movies.filter((movie)=>movie.rating==="PG"))
+  }
+}
+ var movie1=new Movie("Casino Royale","Eon Productions","PG13");
+var movie2=new Movie("movie2","ABC Productions");
+var movie3=new Movie("movie3","XYZ Productions","PG");
+
+ var movieAll=[movie1,movie2,movie3];
+
+console.log (movie1.getPG(movieAll));
+
+
+//Question 02:
+
+class Circle{
+  constructor(radius,color){
+    this.radius=radius;
+    this.color=color;     
+  }
+   get radiusCircle(){
+     return this.radius;
+   }
+   
+   set radiusCircle(radius){
+     this.radius=radius; 
+   }
+   
+   get colorofCircle(){
+   return this.color;
+   }
+   
+   set colorofCircle(color){
+   colorofCircle=color;
+   }
+   
+   get toString(){
+   return "Circle[radius=$(this.radius),color=$(this.color)]";
+   }
+   
+   get areaofCircle(){
+   return(Math.PI* Math.pow(this.radius,2));
+   
+   }
+   
+   
+   get circumferenceofCircle(){
+   
+   return(2*Math.PI*this.radius);
+   }
+}
+   
+   
+   let c1 = new Circle(10,"white");
+   console.log(c1);
+   c1.radiusCircle=20;
+   console.log(c1);
+   console.log (c1.radiusCircle);
+   console.log(c1.colorofCircle);
+   console.log(c1.toString);
+   console.log(c1.areaofCircle);
+   console.log(c1.circumferenceofCircle);
+
+
+//Question:3
+
+
+class Person{
+constructor(name,age,gender){
+this.name=name;
+this.age=age;
+this.gender=gender;
+}
+}
+var p=new Person("Vishnu","24","Female");
+console.log(p);
+
+
+//Question:4
+
+class Uberprice{
+constructor(kilometer){
+this.kilometer=kilometer;
+this.price=this.kilometer*3;
+
+}
+getprice(){
+
+return "charges for the ride is "+this.price;
+}
+}
+var c= new Uberprice("8");
+console.log(c.getprice());
+
